@@ -66,7 +66,7 @@ header {
     background-color: #FCE172;
 }
 .book {
-    background-color: white; 
+    background-color: #FCE172; 
     color: #134266;
     text-decoration: none;
     font-size: 18px;
@@ -75,8 +75,8 @@ header {
     border-radius: 5px;
 }
 .book:hover {
-    background-color: #FCE172;
-    color: #134266
+    background-color: #134266;
+    color: white
 }
 h2 {
     color: #134266;
@@ -84,7 +84,7 @@ h2 {
 }
 
 .join {
-    background-color: white;
+    background-color: #FCE172; 
     color: #134266; 
     text-decoration: none;
     font-size: 18px;
@@ -93,8 +93,8 @@ h2 {
     border-radius: 5px;
 }
 .join:hover {
-    background-color: #FCE172;
-    color: #134266
+    background-color: #134266;
+    color: white
 }
 .mountains {
     box-sizing: border-box;
