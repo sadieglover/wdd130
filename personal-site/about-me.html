@@ -5,8 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sadie Glover Web Design | Marketing | Maintenance</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <script> 
+        let slideIndex;
+        slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+        slideIndex = 0;
+        </script>
 </head>
-<body>
+<body onload="showSlides(1)">
 <div id="content">
     <header>
         <a id="logo_link" href="index.html">   
@@ -23,16 +55,48 @@
         <section id="intro-words">  
             <h1 class="about-me-title">About Me</h1>
         </section>
-        <section class="intro-about-me">
-            <img class="about-me-img" src="images/sadie_picture.jpg" alt="Picture of Sadie Glover">
-            <h2>Hi, my name is Sadie!!</h2>
-            <p>I am so excited that you are here! I currently live in Morgan, Utah and study at Brigham Young University - Idaho online. I am almost finished with my Bachelor’s degree in business management and absolutely love it. My entrepreneurship class back in High School introduced me to website creation and marketing, and I have been obsessed ever since. I am always studying and learning about the new marketing strategies and business improvement techniques. I am a low cost option, with the highest level of loyalty and quality. Your satisfaction is guaranteed. I am excited to work with you!</p>
+        <section id="about-intro">
+            <img class="about-me-img" src="images/sadie_picture.jpg" height="600px" alt="Picture of Sadie Glover">
+            <div class="intro-about-me">
+                <h2>Hi, my name is Sadie!!</h2>
+                <p>I am so excited that you are here! You see that handsome guy in the suit? (see picture below) That’s my husband James. He is my biggest support and has encouraged me to go for my dreams and put myself out there. This picture was taken on the best day of my life, with the best people in my life. My life certainly isn’t perfect, but when I look at this picture it sure feels like it might be.</p>
+                <p>I currently live in Morgan, Utah and study at Brigham Young University - Idaho online. I am almost finished with my Bachelor’s degree in business management and absolutely love it. My entrepreneurship class back in High School introduced me to website creation and marketing, and I have been obsessed ever since. I am always studying and learning about the new marketing strategies and business improvement techniques. I am a low cost option, with the highest level of loyalty and quality. Your satisfaction is guaranteed. I am excited to work with you!</p>
+            </div>
         </section>
         <section class="about-me">
             <h2>My Family</h2>
-            <img class="sadie-img" src="images/sadie_family.jpg" alt="Sadie Glover's Family">
-            <p>You see that handsome guy in the suit. That’s my husband James. He is my biggest support and has encouraged me to go for my dreams and put myself out there. This picture was taken on the best day of my life, with the best people in my life. My life certainly isn’t perfect, but when I look at this picture it sure feels like it might be.</p>
         </section>
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/sadie_family.jpg" style="width:100%" alt="Picture of Sadie Glover's family">
+            </div>
+        
+            <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/sadie_and_james.jpg" style="width:100%" alt="Sadie and James Glover">
+            </div>
+        
+            <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/yankees_game.jpg" style="width:100%" alt="Glover's at a Yankees Game">
+            </div>
+        
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
         <section class="cta">
             <h2>Get in Touch</h2>
             <p>Contact me here to set up your free consultation appointment. I look forward to hearing from you!</p>
@@ -57,3 +121,4 @@
 </div>
 </body>
 </html>
+
