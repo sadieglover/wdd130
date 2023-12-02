@@ -312,3 +312,45 @@ footer .social img {
     margin-top: 100px;
     margin-bottom: 50px;
 }
+
+/* SERVICES PAGE */
+
+#intro-words {
+    margin: 50px;
+    display: grid;
+}
+#services-content {
+    margin: 50px;
+    column-gap: 50px;
+    display: grid;
+}
+.website-setup-design {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 50px;
+}
+.setup-img {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 50px;
+}
+.web-maintenance {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 50px;
+}
+.maintenance-img {
+    grid-column: 1;
+    grid-row: 2;
+    margin: 50px;
+}
+.marketing-assistance {
+    grid-column: 1;
+    grid-row: 3;
+    margin: 50px;
+}
+.marketing-img {
+    grid-column: 2;
+    grid-row: 3;
+    margin: 50px;
+}
