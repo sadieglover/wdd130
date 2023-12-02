@@ -209,11 +209,6 @@ footer p a:hover {
 
 /*Start of new page FAQ*/
 
-/*.faq-grid {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-}*/
-
 #faq-content {
     text-align: left;
     margin: 40px;
