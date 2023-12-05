@@ -327,7 +327,7 @@ footer .social img {
 .website-setup-design {
     grid-column: 1;
     grid-row: 1;
-    margin: 50px;
+    margin: 50px; 
 }
 .setup-img {
     grid-column: 2;
